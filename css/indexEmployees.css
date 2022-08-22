@@ -1,0 +1,738 @@
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 25px;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+header .wave-container {
+  position: relative;
+  background: linear-gradient(to bottom, rgb(1, 36, 80), rgb(23, 71, 130));
+  color: #fff;
+  text-align: center;
+  height: auto;
+  padding: 0;
+  border: none;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .logo {
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+header a {
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+header a:hover {
+  color: rgb(84, 151, 233);
+  transform: scale(1.3);
+}
+
+header button {
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #fff;
+}
+
+header button:hover {
+  color: rgb(84, 151, 233);
+  transform: scale(1.3);
+}
+
+/* Estilo del scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(-225deg, #473b7b 0%, #3584a7 51%, #30d2be 100%);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 50px;
+}
+
+.div-usuario {
+  margin: 10px;
+  border-bottom: 3px solid #ededed;
+  width: 50%;
+}
+
+.div-usuario h4 {
+  font-weight: bold;
+  color: rgb(1, 36, 80);
+}
+
+#dashboard .div-empleados {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  margin: 10px;
+}
+#dashboard-tareas {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  justify-content: space-between;
+}
+.img-empleados img {
+  border: 6px solid #dbdbdb;
+  border-radius: 10px;
+}
+
+#dashboard .img-empleados:hover {
+  transform: scale(1.3);
+}
+
+.nombre-empleado {
+  display: flex;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.Nombre {
+  color: rgb(1, 36, 80);
+  padding: 0;
+  margin: 0;
+}
+
+.Nombre h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.Nombre span {
+  font-size: 10px;
+  font-weight: normal;
+  color: #dbdbdb;
+  margin: 0;
+  padding: 0;
+}
+
+.button-ver-empleados button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.button-ver-empleados button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+.button-ver-empleados button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+.button-ver-empleados button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+.button-ver-empleados button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.button-ver-empleados button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.button-ver-empleados button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button-ver-empleados button:hover .circle {
+  width: 100%;
+}
+
+.button-ver-empleados button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+.button-ver-empleados button:hover .button-text {
+  color: #fff;
+}
+
+.button-ver-empleados {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.empleados-titulo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.empleados-titulo h4 {
+  font-weight: bold;
+  color: rgb(1, 36, 80);
+}
+
+#dashboard .div-producto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+  min-height: 100px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: #f8f8f8;
+}
+
+.img-producto img {
+  border: 6px solid #dbdbdb;
+  border-radius: 10px;
+}
+
+#dashboard .img-producto:hover {
+  transform: scale(1.2);
+}
+
+.button-ver-productos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.button-ver-productos button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.button-ver-productos button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+.button-ver-productos button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+.button-ver-productos button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+.button-ver-productos button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.button-ver-productos button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.button-ver-productos button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button-ver-productos button:hover .circle {
+  width: 100%;
+}
+
+.button-ver-productos button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+.button-ver-productos button:hover .button-text {
+  color: #fff;
+}
+
+.productos-titulo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.productos-titulo h4 {
+  font-weight: bold;
+  color: rgb(1, 36, 80);
+}
+
+#dashboard .tarjeta-solicitudes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+  width: auto;
+  height: auto;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.tarjeta-solicitudes h2 {
+  color: rgb(1, 36, 80);
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.tarjeta-solicitudes span {
+  color: rgb(1, 36, 80);
+  font-size: 25px;
+}
+
+.titulo-solicitudes {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.titulo-solicitudes h4 {
+  font-weight: bold;
+  color: rgb(1, 36, 80);
+}
+
+.tarjeta-solicitudes .nombre {
+  width: 100%;
+  border-bottom: 6px solid rgb(1, 36, 80);
+  padding: 0px;
+}
+
+.button-ver-solicitudes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button-ver-solicitudes button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.button-ver-solicitudes button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+.button-ver-solicitudes button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+.button-ver-solicitudes button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+.button-ver-solicitudes button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.button-ver-solicitudes button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.button-ver-solicitudes button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button-ver-solicitudes button:hover .circle {
+  width: 100%;
+}
+
+.button-ver-solicitudes button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+.button-ver-solicitudes button:hover .button-text {
+  color: #fff;
+}
+
+footer .div-footer {
+  background: linear-gradient(to bottom, rgb(1, 36, 80), rgb(23, 71, 130));
+  text-align: center;
+  align-items: center;
+}
+
+.text-footer {
+  display: none;
+}
+
+.links-footer h5 {
+  display: none;
+}
+
+.social-footer h5 {
+  display: none;
+}
+
+.links-footer,
+.social-footer {
+  padding-top: 10px;
+  color: #fff;
+  padding-bottom: 15px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+}
+.brand .text-footer {
+  display: flex;
+}
+
+@media screen and (min-width: 720px) {
+  header {
+    width: 100%;
+  }
+  header .wave-container {
+    position: relative;
+    background: linear-gradient(to bottom, rgb(1, 36, 80), rgb(23, 71, 130));
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-bar {
+    position: absolute;
+    left: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    width: 70%;
+    align-items: center;
+    padding: 20px;
+  }
+
+  header nav {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+  }
+  #dashboard-tareas {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;
+  }
+  #dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+  }
+
+  #dashboard .container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #dashboard .div-empleados {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .empleados-container {
+    margin: auto;
+    width: auto;
+    height: auto;
+  }
+
+  .productos-container {
+    margin: auto;
+    width: auto;
+    height: auto;
+  }
+
+  .employees {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    align-items: center;
+    margin: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 6px 6px 20px 4px rgba(0, 0, 0, 0.356);
+    min-height: 500px;
+  }
+
+  #dashboard .div-producto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    text-align: center;
+    min-height: 100px;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    align-items: center;
+    margin: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 6px 6px 20px 4px rgba(0, 0, 0, 0.356);
+    min-height: 500px;
+  }
+
+  .solicitudes-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1em;
+  }
+
+  #dashboard .tarjeta-solicitudes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+  }
+
+  .solicitudes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    bottom: 20px;
+    padding: 2em;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 6px 6px 20px 4px rgba(0, 0, 0, 0.356);
+  }
+
+  /*FOOTER DESKTOP*/
+
+  footer img {
+    display: flex;
+  }
+
+  .text-footer {
+    display: flex;
+    width: 200px;
+  }
+
+  footer .div-footer {
+    background: linear-gradient(to bottom, rgb(1, 36, 80), rgb(23, 71, 130));
+    text-align: left;
+    display: flex;
+    color: white;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+
+  .links-footer {
+    margin: 100px;
+  }
+  .links-footer h5 {
+    display: flex;
+  }
+
+  .social-footer h5 {
+    display: flex;
+  }
+}

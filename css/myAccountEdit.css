@@ -1,0 +1,405 @@
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+header .wave-container {
+  position: relative;
+  background: linear-gradient(to bottom, rgb(1, 36, 80), rgb(23, 71, 130));
+  color: #fff;
+  text-align: center;
+  height: auto;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .logo {
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+header a {
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+header a:hover {
+  color: rgb(84, 151, 233);
+  transform: scale(1.3);
+}
+
+header button {
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #fff;
+}
+
+header button:hover {
+  color: rgb(84, 151, 233);
+  transform: scale(1.3);
+}
+
+/* Estilo del scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(-225deg, #473b7b 0%, #3584a7 51%, #30d2be 100%);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 50px;
+}
+
+#input-user {
+  display: none;
+}
+#ocultar-user {
+  display: none;
+}
+#h3-user {
+  display: inline-block;
+}
+#input-email {
+  display: none;
+}
+#ocultar-email {
+  display: none;
+}
+#h3-email {
+  display: inline-block;
+}
+#input-telef {
+  display: none;
+}
+#ocultar-telef {
+  display: none;
+}
+#h3-num {
+  display: inline-block;
+}
+#input-file {
+  display: none;
+}
+#ocultar-file {
+  display: none;
+}
+
+.user-person {
+  border-bottom: 5px solid #ededed;
+  width: auto;
+}
+
+.user-email {
+  border-bottom: 5px solid #ededed;
+  width: auto;
+}
+
+.user-num {
+  border-bottom: 5px solid #ededed;
+  width: auto;
+}
+
+.container-profile {
+  margin: auto;
+  width: 25vh;
+  height: 40vh;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: 8px solid #dbdbdb;
+  margin-bottom: 20px;
+}
+
+.image-profile {
+  padding: 10px;
+  margin: 0;
+}
+.container-info-person span {
+  color: #9c9c9c;
+}
+
+.container-info-person input {
+  border: none;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.container-info-person input:placeholder {
+  align-items: center;
+}
+
+.container-info-person input::placeholder {
+  color: rgb(219, 219, 219);
+  text-align: center;
+}
+
+.div-buttons {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.div-buttons input[type="submit"] {
+  border-radius: 40px;
+  border: 3px #ededed;
+  background-color: rgb(1, 36, 80);
+  color: #ededed;
+  width: 200px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.div-buttons input[type="submit"]:hover {
+  color: rgb(1, 36, 80);
+  background-color: #ededed;
+  border: 3px rgb(1, 36, 80);
+}
+
+.button-volver {
+  display: flex;
+  position: relative;
+  top: 0px;
+  left: 1%;
+}
+
+.button-volver button {
+  height: 3em;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #fff;
+  border: 2px solid rgb(1, 36, 80);
+}
+
+.button-volver button > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+}
+
+.button-volver button:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+}
+
+.button-volver button:hover {
+  transform: translateY(-2px);
+}
+
+footer .div-footer {
+  background: linear-gradient(to bottom, rgb(1, 36, 80), rgb(23, 71, 130));
+  text-align: center;
+  align-items: center;
+}
+
+footer img {
+  display: none;
+}
+.text-footer {
+  display: none;
+}
+
+.links-footer h5 {
+  display: none;
+}
+
+.social-footer h5 {
+  display: none;
+}
+
+.links-footer,
+.social-footer {
+  padding-top: 10px;
+  color: #fff;
+  padding-bottom: 15px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+}
+.brand .text-footer {
+  display: flex;
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    width: 100%;
+  }
+  header .wave-container {
+    position: relative;
+    background: linear-gradient(to bottom, rgb(1, 36, 80), rgb(23, 71, 130));
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-bar {
+    position: absolute;
+    left: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    width: 70%;
+    align-items: center;
+    padding: 20px;
+  }
+  header nav {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+  }
+
+  .container {
+    width: 70%;
+    margin: auto;
+  }
+
+  #hero .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+    align-items: center;
+  }
+
+  @keyframes pulse {
+    0% {
+      left: 0px;
+      top: -400px;
+    }
+    100% {
+      left: 0px;
+      top: 0px;
+    }
+  }
+
+  #form-product{
+    height: auto;
+    width: auto;
+  }
+  .div-profile {
+    background-color: #f8f8f8;
+    width: auto;
+    height: 363px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 1em;
+    box-shadow: 6px 6px 20px 4px rgba(0, 0, 0, 0.356);
+    animation: pulse 0.6s;
+    position: relative;
+  }
+
+  .container-profile {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin: 3em;
+  }
+
+  .container-profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border: 8px solid #dbdbdb;
+    margin-bottom: 20px;
+  }
+
+  .button-volver {
+    display: flex;
+    position: relative;
+    top: 0px;
+    left: 26%;
+    width: 0px;
+  }
+
+  /*FOOTER DESKTOP*/
+
+  footer img {
+    display: flex;
+  }
+  .text-footer {
+    display: flex;
+    width: 200px;
+  }
+
+  footer .div-footer {
+    background: linear-gradient(to bottom, rgb(1, 36, 80), rgb(23, 71, 130));
+    text-align: left;
+    display: flex;
+    color: white;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+
+  .links-footer {
+    margin: 100px;
+  }
+  .links-footer h5 {
+    display: flex;
+  }
+
+  .social-footer h5 {
+    display: flex;
+  }
+}

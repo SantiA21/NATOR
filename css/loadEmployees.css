@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+header .wave-container {
+  position: relative;
+  background: linear-gradient(to bottom, rgb(1, 36, 80), rgb(23, 71, 130));
+  color: #fff;
+  text-align: center;
+  height: auto;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .logo {
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+header a {
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+header a:hover {
+  color: rgb(84, 151, 233);
+  transform: scale(1.3);
+}
+
+header button {
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #fff;
+}
+
+/* Estilo del scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(-225deg, #473b7b 0%, #3584a7 51%, #30d2be 100%);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 50px;
+}
+
+#hero {
+  background-color: #ffff;
+  height: auto;
+  width: auto;
+}
+
+.container-profile {
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+}
+
+.container-profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  border: 8px solid #919191;
+}
+
+.div-profile {
+  margin-top: 40px;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  display: column;
+  background-color: #dbdbdd;
+  border-radius: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 6px 6px 20px 4px rgba(0, 0, 0, 0.356);
+}
+
+.container-info-person input[type="text"],
+.container-info-person input[type="email"],
+.container-info-person input[type="numero"],
+.container-info-person input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: rgb(1, 36, 80);
+  font-size: 16px;
+}
+
+.button-add-employeed button {
+  border: none;
+  width: 200px;
+  height: 40px;
+  border-radius: 40px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(1, 36, 80);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.button-add-employeed button:hover {
+  background-color: rgb(212, 212, 212);
+  color: rgb(1, 36, 80);
+  font-weight: bold;
+  border: 2px solid rgb(1, 36, 80);
+}
+
+footer .div-footer {
+  background: linear-gradient(to bottom, rgb(1, 36, 80), rgb(23, 71, 130));
+  text-align: center;
+  align-items: center;
+}
+
+footer img {
+  display: none;
+}
+.text-footer {
+  display: none;
+}
+
+.links-footer h5 {
+  display: none;
+}
+
+.social-footer h5 {
+  display: none;
+}
+
+.links-footer,
+.social-footer {
+  padding-top: 10px;
+  color: #fff;
+  padding-bottom: 15px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+}
+.brand .text-footer {
+  display: flex;
+}
+
+@media (min-width: 720px) {
+  header {
+    width: 100%;
+  }
+  header .wave-container {
+    position: relative;
+    background: linear-gradient(to bottom, rgb(1, 36, 80), rgb(23, 71, 130));
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-bar {
+    position: absolute;
+    left: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    width: 70%;
+    align-items: center;
+    padding: 20px;
+  }
+  header nav {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+  }
+
+  #hero .container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .div-profile {
+    margin-top: 40px;
+    width: 60%;
+    min-width: 650px;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    background-color: #ededed;
+    border-radius: 10px;
+    box-shadow: 6px 6px 20px 4px rgba(0, 0, 0, 0.356);
+  }
+
+  .div-profile form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*FOOTER DESKTOP*/
+
+  footer img {
+    display: flex;
+  }
+  .text-footer {
+    display: flex;
+    width: 200px;
+  }
+
+  footer .div-footer {
+    background: linear-gradient(to bottom, rgb(1, 36, 80), rgb(23, 71, 130));
+    text-align: left;
+    display: flex;
+    color: white;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+
+  .links-footer {
+    margin: 100px;
+  }
+  .links-footer h5 {
+    display: flex;
+  }
+
+  .social-footer h5 {
+    display: flex;
+  }
+}
